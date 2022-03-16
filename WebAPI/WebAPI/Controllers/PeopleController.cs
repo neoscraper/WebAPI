@@ -30,6 +30,29 @@ namespace WebAPI.Controllers
             return people.Where(x => x.ID == id).FirstOrDefault();
         }
 
+        //Changes route, since there can't be multiple gets
+        [Route("api/People/ListFirstNames")]
+        //Shows type of HTTP request
+        [HttpGet]
+        public IEnumerable<String> ListFirstNames()
+        {
+            List<string> firstNames = new List<string>();
+
+            foreach(Person p in people)
+            {
+                firstNames.Add(p.FirstName);
+            }
+
+            return firstNames;
+        }
+
+        [Route("api/People/NumberOfPeople")]
+        [HttpGet]
+        public int NumberOfPeople()
+        {
+            return people.Count;
+        }
+
         // POST: api/People
         public void Post(Person person)
         {
