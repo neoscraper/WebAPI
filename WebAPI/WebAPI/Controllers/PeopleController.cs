@@ -59,6 +59,18 @@ namespace WebAPI.Controllers
             people.Add(person);
         }
 
+        [Route("api/People/ChangeID/{oldID:int}/{newID:int}")]
+        [HttpPut]
+        public Person ChangeID(int oldID, int newID)
+        {
+            Person changePerson = people.Where(x => x.ID == oldID).FirstOrDefault();
+            if(changePerson != null)
+            {
+                changePerson.ID = newID;
+            }
+            return changePerson;
+        }
+
         // DELETE: api/People/5
         public void Delete(int id)
         {
