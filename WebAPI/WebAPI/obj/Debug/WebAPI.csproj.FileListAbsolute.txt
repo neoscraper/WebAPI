@@ -83,3 +83,4 @@ C:\Users\Thomas\Documents\Visual Studio 2019\source\repos\WebAPI\WebAPI\WebAPI\o
 C:\Users\Thomas\Documents\Visual Studio 2019\source\repos\WebAPI\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
 C:\Users\Thomas\Documents\Visual Studio 2019\source\repos\WebAPI\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\Thomas\Documents\Visual Studio 2019\source\repos\WebAPI\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\Thomas\Documents\Visual Studio 2019\source\repos\WebAPI\WebAPI\WebAPI\bin\Documentation.xml

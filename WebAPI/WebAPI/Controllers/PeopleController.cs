@@ -96,10 +96,15 @@ namespace WebAPI.Controllers
         [HttpPut]
         public Person ChangeID(int oldID, int newID)
         {
+            //Checks to see if ID exists
             Person changePerson = people.Where(x => x.ID == oldID).FirstOrDefault();
             if(changePerson != null)
             {
-                changePerson.ID = newID;
+                //Checks to see if ID is taken
+                if (people.Where(x => x.ID == newID).FirstOrDefault() == null)
+                {
+                    changePerson.ID = newID; 
+                }
             }
             return changePerson;    
         }
