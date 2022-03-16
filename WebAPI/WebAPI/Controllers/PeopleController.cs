@@ -39,6 +39,7 @@ namespace WebAPI.Controllers
         // DELETE: api/People/5
         public void Delete(int id)
         {
+            people.Remove(people.Where(x => x.ID == id).FirstOrDefault());
         }
     }
 }
